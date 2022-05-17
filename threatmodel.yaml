@@ -1,0 +1,43 @@
+metadata:
+  keyOne: valOne
+
+service:
+  name: my_service
+  team: team_a
+  kind: site
+  isStub: false
+  isThirdParty: true
+  location: azure
+  isPublic: true
+  environment: prod
+  dataIdentifiers:
+    - names
+    - ssns
+    - emails
+  hosts:
+    - qa1.internal.xyz
+    - qa2.internal.xyz
+  homeUrl: https://qa1.internal.xyz:8888
+  docsUrl: https://mydocs.site.com
+  repository: https://site.githost.com/my_service
+
+providers:
+  thirdParty:
+    - salesforce
+    - adwords
+  inHouse: 
+    - auth_service
+
+threatModel:
+  - threat: SQL Injection
+    status: ACTIVE
+    risk: HIGH
+    cwe: 89
+    description: 
+    mitigation: Parameterized Statements
+  - threat: XSS
+    status: MITIGATED
+    risk: LOW
+    cwe: 79
+    description: 
+    mitigation: Output Encoding
