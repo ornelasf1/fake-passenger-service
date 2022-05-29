@@ -23,10 +23,10 @@ service:
 
 providers:
   thirdParty:
-    - salesforce_2
-    - adwords_2
+    - salesforce
+    - adwords
   inHouse: 
-    - auth_service_2
+    - auth_service
 
 threatModel:
   - threat: SQL Injection
